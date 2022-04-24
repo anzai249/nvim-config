@@ -1,4 +1,5 @@
 require("basic.settings")
-require("basic.keybinds")
+require("keybinds")
 require("basic.config")
 require("basic.plugins")
+-- require("lsp.nvim-cmp")

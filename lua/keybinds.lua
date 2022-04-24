@@ -40,5 +40,5 @@ vim.keybinds.gmap("n", "<leader>fc", "<cmd>NvimTreeFindFile<CR>", vim.keybinds.o
 
 
 -- bufferline 左右Tab切换
--- map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
--- map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+vim.keybinds.gmap("n", "<C-h>", ":BufferLineCyclePrev<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-l>", ":BufferLineCycleNext<CR>", vim.keybinds.opts)
