@@ -27,7 +27,13 @@ return require('packer').startup(
           require("conf.bufferline")
         end
       }
+      -- theme
       use 'folke/tokyonight.nvim'
+      -- lsp config
+      use {
+        'neovim/nvim-lspconfig', 
+        'williamboman/nvim-lsp-installer'
+      }
       -- nvim-cmp
       use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
       use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
