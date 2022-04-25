@@ -9,6 +9,7 @@ return require('packer').startup(
       use {
         "yianwillis/vimcdoc",
       }
+      -- nvim-tree
       use {
         "kyazdani42/nvim-tree.lua",
         requires = {
@@ -20,6 +21,7 @@ return require('packer').startup(
           require("conf.nvim-tree")
         end
       }
+      -- bufferline
       use {
         "akinsho/bufferline.nvim", 
         requires = 'kyazdani42/nvim-web-devicons',
@@ -27,8 +29,34 @@ return require('packer').startup(
           require("conf.bufferline")
         end
       }
+      -- git
+      use 'airblade/vim-gitgutter' -- TODO: better git integration
       -- theme
       use 'folke/tokyonight.nvim'
+      -- telescope
+      use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} },
+        config = function()
+          require("conf.telescope")
+        end
+      }
+      -- startup screen
+      use {
+        'goolord/alpha-nvim',
+        requires = { 'kyazdani42/nvim-web-devicons' },
+        config = function ()
+            require('conf.alpha-nvim')
+        end
+      }
+      -- lualine
+      use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+        config = function()
+          require("conf.lualine")
+        end
+      }
       -- treesitter highlight
       use { 
         'nvim-treesitter/nvim-treesitter', 
