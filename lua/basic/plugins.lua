@@ -29,6 +29,14 @@ return require('packer').startup(
       }
       -- theme
       use 'folke/tokyonight.nvim'
+      -- treesitter highlight
+      use { 
+        'nvim-treesitter/nvim-treesitter', 
+        run = ':TSUpdate',
+        config = function()
+          require("conf.nvim-treesitter")
+        end
+      }
       -- lsp config
       use {
         'neovim/nvim-lspconfig', 
