@@ -33,6 +33,7 @@ return require('packer').startup(
       use 'airblade/vim-gitgutter' -- TODO: better git integration
       -- theme
       use 'folke/tokyonight.nvim'
+      use 'Mofiqul/vscode.nvim'
       -- telescope
       use {
         'nvim-telescope/telescope.nvim',
@@ -46,7 +47,14 @@ return require('packer').startup(
         'goolord/alpha-nvim',
         requires = { 'kyazdani42/nvim-web-devicons' },
         config = function ()
-            require('conf.alpha-nvim')
+          require('conf.alpha-nvim')
+        end
+      }
+      -- terminal
+      use {
+        "akinsho/toggleterm.nvim",
+        config = function ()
+          require('conf.toggleterm')
         end
       }
       -- lualine
